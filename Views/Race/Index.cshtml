@@ -1,0 +1,52 @@
+@model IEnumerable<Race>
+
+<section class="space-sm flush-with-above">
+
+    <div class="container">
+
+        <ul class="row feature-list feature-list-sm">
+            @foreach (var race in Model)
+            {
+                <li class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <a type="button" asp-controller="Race" asp-action="RaceDetails" asp-route-id="@race.ID">
+                            @if(race.Image != null)
+                            {
+                              <img class="card-img-top" src="/RaceAttachment/@race.Image" alt="Card image cap">   
+
+                            }
+                            else
+                            {
+                               <img class="card-img-top" src="https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&amp;strip=1&amp;resize=640%2C360" alt="Card image cap"> 
+                            }
+                            
+                        </a>
+                        <div class="card-body">
+                            <h4 class="card-title">@race.Title</h4>
+                            <p class="card-text">@race.Address?.City, @race.Address?.State</p>
+                        </div>
+
+                             <div class="card-footer card-footer-borderless d-flex justify-content-between">
+                            <div>
+                                <small>@race.RaceCategory</small>
+                            </div>
+                            @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                            {
+                                <div>
+                                    <a type="button" class="btn btn-sm btn-outline-info" asp-controller="Race" asp-action="Edit" asp-route-id="@race.ID">
+                                        Edit
+                                    </a>
+                                    <a type="button" class="btn btn-sm btn-outline-danger" asp-controller="Race" asp-action="Delete" asp-route-id="@race.ID">
+                                        Delete
+                                    </a>
+                                </div>
+                            }
+                        </div>
+            
+                    </div>
+                </li>
+            }
+        </ul>
+
+    </div>
+</section>
