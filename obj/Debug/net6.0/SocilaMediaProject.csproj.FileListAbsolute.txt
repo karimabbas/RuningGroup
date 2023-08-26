@@ -91,3 +91,7 @@ C:\Users\20115\Downloads\Dotnet\MVC\vscode-projects\SocilaMediaProject\bin\Debug
 C:\Users\20115\Downloads\Dotnet\MVC\vscode-projects\SocilaMediaProject\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\20115\Downloads\Dotnet\MVC\vscode-projects\SocilaMediaProject\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\20115\Downloads\Dotnet\MVC\vscode-projects\SocilaMediaProject\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\20115\Downloads\Dotnet\MVC\vscode-projects\SocilaMediaProject\bin\Debug\net6.0\SendGrid.dll
+C:\Users\20115\Downloads\Dotnet\MVC\vscode-projects\SocilaMediaProject\bin\Debug\net6.0\StarkbankEcdsa.dll
+C:\Users\20115\Downloads\Dotnet\MVC\vscode-projects\SocilaMediaProject\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.Facebook.dll
+C:\Users\20115\Downloads\Dotnet\MVC\vscode-projects\SocilaMediaProject\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.Google.dll

@@ -49,6 +49,10 @@
       "PackagePath": "staticwebassets\\ClubAttachment\\Napoloeon.jpg"
     },
     {
+      "Id": "C:\\Users\\20115\\Downloads\\Dotnet\\MVC\\vscode-projects\\SocilaMediaProject\\wwwroot\\ClubAttachment\\karim.jpg",
+      "PackagePath": "staticwebassets\\ClubAttachment\\karim.jpg"
+    },
+    {
       "Id": "C:\\Users\\20115\\Downloads\\Dotnet\\MVC\\vscode-projects\\SocilaMediaProject\\wwwroot\\RaceAttachment\\354223783_2510812492416472_7381095094981884006_n.jpg",
       "PackagePath": "staticwebassets\\RaceAttachment\\354223783_2510812492416472_7381095094981884006_n.jpg"
     },

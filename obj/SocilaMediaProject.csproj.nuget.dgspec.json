@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\20115\\Downloads\\Dotnet\\MVC\\vscode-projects\\SocilaMediaProject\\SocilaMediaProject.csproj": {}
+    "c:\\Users\\20115\\Downloads\\Dotnet\\MVC\\vscode-projects\\SocilaMediaProject\\SocilaMediaProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\20115\\Downloads\\Dotnet\\MVC\\vscode-projects\\SocilaMediaProject\\SocilaMediaProject.csproj": {
+    "c:\\Users\\20115\\Downloads\\Dotnet\\MVC\\vscode-projects\\SocilaMediaProject\\SocilaMediaProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\20115\\Downloads\\Dotnet\\MVC\\vscode-projects\\SocilaMediaProject\\SocilaMediaProject.csproj",
+        "projectUniqueName": "c:\\Users\\20115\\Downloads\\Dotnet\\MVC\\vscode-projects\\SocilaMediaProject\\SocilaMediaProject.csproj",
         "projectName": "SocilaMediaProject",
-        "projectPath": "C:\\Users\\20115\\Downloads\\Dotnet\\MVC\\vscode-projects\\SocilaMediaProject\\SocilaMediaProject.csproj",
+        "projectPath": "c:\\Users\\20115\\Downloads\\Dotnet\\MVC\\vscode-projects\\SocilaMediaProject\\SocilaMediaProject.csproj",
         "packagesPath": "C:\\Users\\20115\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\20115\\Downloads\\Dotnet\\MVC\\vscode-projects\\SocilaMediaProject\\obj\\",
+        "outputPath": "c:\\Users\\20115\\Downloads\\Dotnet\\MVC\\vscode-projects\\SocilaMediaProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\20115\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,7 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.307\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -41,6 +41,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.Facebook": {
+              "target": "Package",
+              "version": "[6.0.21, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Google": {
+              "target": "Package",
+              "version": "[6.0.21, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.21, )"
@@ -60,6 +68,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "SendGrid": {
+              "target": "Package",
+              "version": "[9.28.1, )"
             }
           },
           "imports": [
@@ -73,6 +85,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.21, 6.0.21]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.21, 6.0.21]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.21, 6.0.21]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.21, 6.0.21]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -81,7 +111,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.307\\RuntimeIdentifierGraph.json"
         }
       }
     }

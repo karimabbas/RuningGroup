@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6H3XjSb8vu4g8NBJWY5ZzLT9iJS5CjRg90qD/tx/irU=",
+  "Hash": "6ocvN7knZJRJapNINhAncfyQJeBxcqzRlCIZgxLWcpw=",
   "Source": "SocilaMediaProject",
   "BasePath": "_content/SocilaMediaProject",
   "Mode": "Default",
@@ -219,6 +219,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\ClubAttachment\\Banner_of_the_Holy_Roman_Emperor_with_haloes_(1400-1806).svg.png"
+    },
+    {
+      "Identity": "C:\\Users\\20115\\Downloads\\Dotnet\\MVC\\vscode-projects\\SocilaMediaProject\\wwwroot\\ClubAttachment\\karim.jpg",
+      "SourceId": "SocilaMediaProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\20115\\Downloads\\Dotnet\\MVC\\vscode-projects\\SocilaMediaProject\\wwwroot\\",
+      "BasePath": "_content/SocilaMediaProject",
+      "RelativePath": "ClubAttachment/karim.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ClubAttachment\\karim.jpg"
     },
     {
       "Identity": "C:\\Users\\20115\\Downloads\\Dotnet\\MVC\\vscode-projects\\SocilaMediaProject\\wwwroot\\ClubAttachment\\Napoloeon.jpg",
