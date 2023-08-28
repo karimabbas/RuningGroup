@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cQ7WwkdsdMDBPEOonVLxn34Q4ntSAbXX4UOzh29d/esvVQZ/qeihZ1S2L69KbDEJgl28hX8C/hNarmLRKwq3vQ==",
+  "dgSpecHash": "QlhUh9ienNHIaI8FNGGrnPcc8h5qmieqKRRplxCZ/Sb2kFLLpZ2O6j61aUAwjMAvKJDovZn+5u0SC5aKhrmoUQ==",
   "success": true,
-  "projectFilePath": "c:\\Users\\20115\\Downloads\\Dotnet\\MVC\\vscode-projects\\SocilaMediaProject\\SocilaMediaProject.csproj",
+  "projectFilePath": "C:\\Users\\20115\\Downloads\\Dotnet\\MVC\\vscode-projects\\SocilaMediaProject\\SocilaMediaProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\20115\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\20115\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

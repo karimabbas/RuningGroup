@@ -8,6 +8,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,13 +20,15 @@
     <link rel="stylesheet" href="~/SocilaMediaProject.styles.css" asp-append-version="true" />
     <script src="https://kit.fontawesome.com/8aa18c8793.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div class="navbar-container">
         <div class="bg-light navbar-light" data-sticky="top">
             <div class="container">
                 <nav class="navbar navbar-expand-lg">
                     <a class="navbar-brand" asp-controller="Home" asp-action="Index" id="logo-text">RunGroup</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="icon-menu h4"></i>
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
@@ -36,7 +39,8 @@
                             @if (SignInManager.IsSignedIn(User))
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link" asp-area="" asp-controller="user" asp-action="Index">Find Runners</a>
+                                    <a class="nav-link" asp-area="" asp-controller="user" asp-action="Index">Find
+                                        Runners</a>
                                 </li>
                             }
                             <li class="nav-item">
@@ -48,15 +52,24 @@
                             <li class="nav-item">
                                 <a class="nav-link" asp-area="" asp-controller="Race" asp-action="Index">Blog</a>
                             </li>
+                            @if (User.Identity.IsAuthenticated &&
+                            User.IsInRole("Admin"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="" asp-controller="Role" asp-action="Index">Roles</a>
+                                </li>
+                            }
                         </ul>
                         @if (SignInManager.IsSignedIn(User))
                         {
                             <ul class="navbar-nav">
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle p-lg-0" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle p-lg-0" href="#" id="dropdown01"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         @if (!string.IsNullOrEmpty(currentUser.ProfileImageUrl))
                                         {
-                                            <img alt="Image" src="/UsersAttachment/@currentUser.ProfileImageUrl" class="avatar avatar-xs">
+                                            <img alt="Image" src="/UsersAttachment/@currentUser.ProfileImageUrl"
+                                                class="avatar avatar-xs">
                                         }
                                         else
                                         {
@@ -64,7 +77,8 @@
                                         }
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-                                        <a class="dropdown-item" asp-controller="User" asp-action="Detail" asp-route-id="@currentUser.Id">
+                                        <a class="dropdown-item" asp-controller="User" asp-action="Detail"
+                                            asp-route-id="@currentUser.Id">
                                             <span class="h6 mb-0">View Profile</span>
                                         </a>
 
@@ -116,7 +130,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-3">
-                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" id="logo-text">RunGroop</a>
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"
+                        id="logo-text">RunGroop</a>
                     <p class="text-muted">
                         &copy; 2022 RunGroop
                         <br />
@@ -131,20 +146,18 @@
                             <h6>Navigate</h6>
                             <ul class="list-unstyled">
                                 <li>
-                                    <a asp-area="" asp-controller="Home"
-                                       asp-action="Index">Home</a>
+                                    <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                                 </li>
                                 <li>
-                                    <a asp-area="" asp-controller="Users"
-                                       asp-action="Index">Find Runners Near You</a>
+                                    <a asp-area="" asp-controller="Users" asp-action="Index">Find Runners Near You</a>
                                 </li>
                                 <li>
-                                    <a asp-area="" asp-controller="Club"
-                                       asp-action="Index">Find Running Clubs Near You</a>
+                                    <a asp-area="" asp-controller="Club" asp-action="Index">Find Running Clubs Near
+                                        You</a>
                                 </li>
                                 <li>
-                                    <a asp-area="" asp-controller="Race"
-                                       asp-action="Index">Find Running Races Near You</a>
+                                    <a asp-area="" asp-controller="Race" asp-action="Index">Find Running Races Near
+                                        You</a>
                                 </li>
                             </ul>
                         </div>
@@ -153,12 +166,12 @@
                             <h6>Club Directory</h6>
                             <ul class="list-unstyled">
                                 <li>
-                                    <a asp-area="" asp-controller="Club"
-                                       asp-action="RunningClubsByStateDirectory">Find Running Clubs By State</a>
+                                    <a asp-area="" asp-controller="Club" asp-action="RunningClubsByStateDirectory">Find
+                                        Running Clubs By State</a>
                                 </li>
                                 <li>
                                     <a asp-area="" asp-controller="Club"
-                                       asp-action="RunningClubsByStateForCityDirectory">Find Running Clubs By City</a>
+                                        asp-action="RunningClubsByStateForCityDirectory">Find Running Clubs By City</a>
                                 </li>
                             </ul>
                         </div>
@@ -209,4 +222,5 @@
     <script src="~/js/custom.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>

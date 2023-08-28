@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\20115\\Downloads\\Dotnet\\MVC\\vscode-projects\\SocilaMediaProject\\SocilaMediaProject.csproj": {}
+    "C:\\Users\\20115\\Downloads\\Dotnet\\MVC\\vscode-projects\\SocilaMediaProject\\SocilaMediaProject.csproj": {}
   },
   "projects": {
-    "c:\\Users\\20115\\Downloads\\Dotnet\\MVC\\vscode-projects\\SocilaMediaProject\\SocilaMediaProject.csproj": {
+    "C:\\Users\\20115\\Downloads\\Dotnet\\MVC\\vscode-projects\\SocilaMediaProject\\SocilaMediaProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\20115\\Downloads\\Dotnet\\MVC\\vscode-projects\\SocilaMediaProject\\SocilaMediaProject.csproj",
+        "projectUniqueName": "C:\\Users\\20115\\Downloads\\Dotnet\\MVC\\vscode-projects\\SocilaMediaProject\\SocilaMediaProject.csproj",
         "projectName": "SocilaMediaProject",
-        "projectPath": "c:\\Users\\20115\\Downloads\\Dotnet\\MVC\\vscode-projects\\SocilaMediaProject\\SocilaMediaProject.csproj",
+        "projectPath": "C:\\Users\\20115\\Downloads\\Dotnet\\MVC\\vscode-projects\\SocilaMediaProject\\SocilaMediaProject.csproj",
         "packagesPath": "C:\\Users\\20115\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\20115\\Downloads\\Dotnet\\MVC\\vscode-projects\\SocilaMediaProject\\obj\\",
+        "outputPath": "C:\\Users\\20115\\Downloads\\Dotnet\\MVC\\vscode-projects\\SocilaMediaProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\20115\\AppData\\Roaming\\NuGet\\NuGet.Config",

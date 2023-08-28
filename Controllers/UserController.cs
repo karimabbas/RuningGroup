@@ -12,6 +12,8 @@ using Microsoft.Extensions.Logging;
 using SocilaMediaProject.Interfaces;
 using SocilaMediaProject.Models;
 using SocilaMediaProject.ViewModels;
+using SocilaMediaProject.Data;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace SocilaMediaProject.Controllers
 {
@@ -20,12 +22,14 @@ namespace SocilaMediaProject.Controllers
         private readonly ILogger<UserController> _logger;
         private readonly IUserRepository _userRepository;
         private readonly UserManager<AppUser> _userManager;
+        private readonly MyDBContext _myDBContext;
 
-        public UserController(ILogger<UserController> logger, IUserRepository userRepository, UserManager<AppUser> userManager)
+        public UserController(ILogger<UserController> logger, MyDBContext myDBContext, IUserRepository userRepository, UserManager<AppUser> userManager)
         {
             _logger = logger;
             _userRepository = userRepository;
             _userManager = userManager;
+            _myDBContext = myDBContext;
         }
 
         [HttpGet]
@@ -49,8 +53,23 @@ namespace SocilaMediaProject.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            var users = await _userRepository.GetAllUsers();
-            return View(users);
+            var usersRoles = _myDBContext.UserRoles.ToList();
+            var Users = await _userRepository.GetAllUsers();
+            foreach (var user in Users)
+            {
+                var role = usersRoles.FirstOrDefault(x => x.UserId == user.Id);
+                if (role == null)
+                {
+                    user.Role = "None";
+
+                }
+                else
+                {
+                    user.Role = _myDBContext.Roles.FirstOrDefault(x => x.Id == role.RoleId).Name;
+
+                }
+            }
+            return View(Users);
 
         }
 
@@ -110,6 +129,45 @@ namespace SocilaMediaProject.Controllers
             return RedirectToAction("Index", "Dashboard");
         }
 
+        [HttpGet]
+        public IActionResult EditRole(string Id)
+        {
+            var user = _myDBContext.Users.Find(Id);
+            if (user == null) return NotFound();
+
+            var UserRole = _myDBContext.UserRoles.FirstOrDefault(x => x.UserId == user.Id);
+            if (UserRole != null)
+            {
+                user.RoleId = _myDBContext.Roles.FirstOrDefault(x => x.Id == UserRole.RoleId).Id;
+            }
+            user.RoleList = _myDBContext.Roles.Select(u => new SelectListItem
+            {
+                Text = u.Name,
+                Value = u.Id
+            });
+            return View(user);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditRole(AppUser user)
+        {
+            if (ModelState.IsValid)
+            {
+                var userDB = _myDBContext.Users.FirstOrDefault(x => x.Id == user.Id);
+                if (userDB == null) return NotFound();
+                var UserRole = _myDBContext.UserRoles.FirstOrDefault(x => x.UserId == userDB.Id);
+
+                if(UserRole !=null){
+                    var prviousRoleName = _myDBContext.Roles.Where(x=>x.Id == UserRole.RoleId).Select(e=>e.Name).FirstOrDefault();
+                  var x=  await _userManager.RemoveFromRoleAsync(userDB,prviousRoleName);
+                } 
+
+               var newuser= await _userManager.AddToRoleAsync(userDB, _myDBContext.Roles.FirstOrDefault(x => x.Id == user.RoleId).Name);
+                _myDBContext.SaveChanges();
+            }
+            return RedirectToAction("Index");
+
+        }
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

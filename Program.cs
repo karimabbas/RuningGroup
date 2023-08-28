@@ -41,7 +41,7 @@ builder.Services.AddAuthentication()
        options.AppSecret = builder.Configuration.GetValue<string>("FaceBook_AppSecret");
    });
 
-   
+
 builder.Services.AddMemoryCache();
 
 builder.Services.AddSession(options =>
