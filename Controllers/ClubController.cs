@@ -27,6 +27,7 @@ namespace SocilaMediaProject.Controllers
             _clubRepository = clubRepository;
 
         }
+        [Authorize(Policy = "ClubAccess")]
         public async Task<IActionResult> Index()
         {
             // dynamic mymodel = new ExpandoObject();

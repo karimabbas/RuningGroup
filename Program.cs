@@ -41,6 +41,7 @@ builder.Services.AddAuthentication()
        options.AppSecret = builder.Configuration.GetValue<string>("FaceBook_AppSecret");
    });
 
+builder.Services.AddAuthorization(option => option.AddPolicy("ClubAccess", policy => policy.RequireRole("Admin")));
 
 builder.Services.AddMemoryCache();
 
@@ -51,6 +52,9 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
+
+builder.Services.AddRazorPages(options => options.Conventions.AuthorizePage("/Privacy", "ClubAccess"));
+
 
 // builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
 var app = builder.Build();
